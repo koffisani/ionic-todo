@@ -11,6 +11,7 @@ export class HomePage {
 
   public todos = [];
   public reorderIsEnabled = false;
+  public archivedTodosPage = ArchivedTodosPage;
 
   constructor(public navCtrl: NavController, 
     private alertController : AlertController, 

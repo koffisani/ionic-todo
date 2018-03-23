@@ -33,7 +33,7 @@
   </ion-list>
 
   <ion-fab right bottom>
-    <button ion-fab (click)="goToArchivePage()">
+    <button ion-fab [navPush]="archivedTodosPage">
       <ion-icon name="archive"></ion-icon>
     </button>
   </ion-fab>
