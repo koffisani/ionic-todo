@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, AlertController, reorderArray } from 'ionic-angular';
 
 import { TodoProvider } from '../../providers/todo/todo';
-
+import { ArchivedTodosPage } from '../archived-todos/archived-todos';
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -16,6 +16,10 @@ export class HomePage {
     private alertController : AlertController, 
     private todoProvider: TodoProvider) {
       this.todos = this.todoProvider.getTodos();
+  }
+
+  goToArchivePage () {
+    this.navCtrl.push(ArchivedTodosPage);
   }
 
   toggleReorder () {
