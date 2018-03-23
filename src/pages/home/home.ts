@@ -10,6 +10,8 @@ import { TodoProvider } from '../../providers/todo/todo';
 export class HomePage {
 
   public todos = [];
+  public reorderIsEnabled = true;
+  
   constructor(public navCtrl: NavController, 
     private alertController : AlertController, 
     private todoProvider: TodoProvider) {

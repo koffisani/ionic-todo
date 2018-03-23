@@ -13,7 +13,7 @@
 
 <ion-content padding>
   The world is your oyster.
-  <ion-list>
+  <ion-list [reorder]="reorderIsEnabled">
     <ion-item-sliding *ngFor="let todo of todos">
       <ion-item>
         {{ todo }}
