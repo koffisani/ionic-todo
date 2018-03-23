@@ -22,6 +22,10 @@ export class HomePage {
     this.navCtrl.push(ArchivedTodosPage);
   }
 
+  archiveTodo (todoIndex) {
+    this.todoProvider.archiveTodo(todoIndex);
+  }
+
   toggleReorder () {
     this.reorderIsEnabled = !this.reorderIsEnabled;
   }
