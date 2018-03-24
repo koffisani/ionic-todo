@@ -13,7 +13,7 @@ import { Injectable } from '@angular/core';
 export class TodoProvider {
 
   private todos = [];
-  private archedTodos = [];
+  private archivedTodos = [];
 
   constructor(public http: HttpClient) {
     console.log('Hello TodoProvider Provider');
@@ -22,7 +22,7 @@ export class TodoProvider {
   archiveTodo (todoIndex) {
     let todoToBeArchived = this.todos[todoIndex];
     this.todos.splice(todoIndex, 1);
-    this.archedTodos.push(todoToBeArchived);
+    this.archivedTodos.push(todoToBeArchived);
   }
 
   getTodos() {
@@ -30,10 +30,14 @@ export class TodoProvider {
   }
 
   getArchivedTodos () {
-    return this.archedTodos;
+    return this.archivedTodos;
   }
 
   addTodo (todo) {
     this.todos.push(todo);
+  }
+
+  editTodo (todoIndex, todo) {
+    this.todos[todoIndex] = todo;
   }
 }
