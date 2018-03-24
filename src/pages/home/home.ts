@@ -93,7 +93,7 @@ export class HomePage {
             let todoText;
             todoText = inputData.addTodoInput;
             //this.todos.push(todoText);
-            this.todos = this.todoProvider.editTodo(todoText, todoText);
+            this.todoProvider.editTodo(todoText, todoText);
             
             addTodoAlert.onDidDismiss(() => {
               let addTodoToast = this.toastController.create({
